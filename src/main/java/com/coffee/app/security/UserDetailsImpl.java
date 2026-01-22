@@ -1,6 +1,6 @@
 package com.coffee.app.security;
 
-import com.coffee.app.model.User;
+import com.coffee.app.model.entities.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

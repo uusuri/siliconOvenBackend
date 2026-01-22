@@ -1,12 +1,10 @@
-package com.coffee.app.model;
+package com.coffee.app.model.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "order_items")
@@ -18,20 +16,16 @@ public class OrderItem {
     private Long id;
 
     @ManyToOne
-    private Order order;
-
-    @ManyToOne
     private Drink drink;
 
     @ManyToOne
-    private Coffee selectedCoffee;
-
-    @ManyToOne
-    private Milk selectedMilk;
-
-    @ManyToMany
-    private Set<Syrup> selectedSyrups = new HashSet<>();
+    private Order order;
 
     private Integer quantity;
     private BigDecimal totalPrice;
+
+    public void recalculateTotalPrice() {
+        BigDecimal price = drink.calculatePrice();
+        this.totalPrice = price.multiply(BigDecimal.valueOf(quantity));
+    }
 }

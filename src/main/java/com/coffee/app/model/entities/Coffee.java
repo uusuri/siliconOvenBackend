@@ -1,14 +1,14 @@
-package com.coffee.app.model;
+package com.coffee.app.model.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "milk")
+@Table(name = "coffee")
 @Setter
 @Getter
-public class Milk {
+public class Coffee {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

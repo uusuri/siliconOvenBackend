@@ -1,6 +1,6 @@
 package com.coffee.app.service;
 
-import com.coffee.app.model.User;
+import com.coffee.app.model.entities.User;
 import com.coffee.app.repositiory.UserRepository;
 import com.coffee.app.security.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;

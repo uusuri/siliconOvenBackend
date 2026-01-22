@@ -1,14 +1,16 @@
-package com.coffee.app.model;
+package com.coffee.app.model.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Entity
-@Table(name = "coffee")
+@Table(name = "syrup")
 @Setter
 @Getter
-public class Coffee {
+public class Syrup {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +20,7 @@ public class Coffee {
     private String name;
 
     @Column(name = "price", nullable = false)
-    private double price;
+    private BigDecimal price;
 
     @Column(name = "description", nullable = true)
     private String description;

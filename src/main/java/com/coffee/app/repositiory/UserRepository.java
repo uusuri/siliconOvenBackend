@@ -1,6 +1,6 @@
 package com.coffee.app.repositiory;
 
-import com.coffee.app.model.User;
+import com.coffee.app.model.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

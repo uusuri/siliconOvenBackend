@@ -1,6 +1,6 @@
 package com.coffee.app.controllers;
 
-import com.coffee.app.model.Drink;
+import com.coffee.app.model.entities.Drink;
 import com.coffee.app.repositiory.DrinkRepository;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

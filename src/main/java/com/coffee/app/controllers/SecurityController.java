@@ -1,7 +1,7 @@
 package com.coffee.app.controllers;
 
 import com.coffee.app.model.Role;
-import com.coffee.app.model.User;
+import com.coffee.app.model.entities.User;
 import com.coffee.app.security.JWTCore;
 import com.coffee.app.repositiory.UserRepository;
 import com.coffee.app.security.SignupRequest;
@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/auth")
 public class SecurityController {
-
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;

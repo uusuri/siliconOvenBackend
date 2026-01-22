@@ -1,4 +1,4 @@
-package com.coffee.app.model;
+package com.coffee.app.model.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -6,8 +6,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Table(name = "orders")
@@ -21,9 +20,10 @@ public class Order {
     @ManyToOne
     private User user;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    private Set<OrderItem> orderItems = new HashSet<>();
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<OrderItem> orderItems;
 
-    private LocalDateTime orderDate;
+    private String status;
+    private LocalDateTime date;
     private BigDecimal totalAmount;
 }

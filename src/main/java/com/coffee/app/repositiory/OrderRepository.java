@@ -1,10 +1,9 @@
 package com.coffee.app.repositiory;
 
-import com.coffee.app.model.entities.Milk;
+import com.coffee.app.model.entities.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MilkRepository extends JpaRepository<Milk, Long> {
-    Milk findByName(String name);
+public interface OrderRepository extends JpaRepository<Order, Long> {
 }

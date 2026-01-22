@@ -1,5 +1,6 @@
-package com.coffee.app.model;
+package com.coffee.app.model.entities;
 
+import com.coffee.app.model.Role;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

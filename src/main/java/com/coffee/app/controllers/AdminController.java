@@ -1,9 +1,9 @@
 package com.coffee.app.controllers;
 
-import com.coffee.app.model.Coffee;
-import com.coffee.app.model.Drink;
-import com.coffee.app.model.Milk;
-import com.coffee.app.model.Syrup;
+import com.coffee.app.model.entities.Coffee;
+import com.coffee.app.model.entities.Drink;
+import com.coffee.app.model.entities.Milk;
+import com.coffee.app.model.entities.Syrup;
 import com.coffee.app.repositiory.CoffeeRepository;
 import com.coffee.app.repositiory.DrinkRepository;
 import com.coffee.app.repositiory.MilkRepository;
